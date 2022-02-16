@@ -29,7 +29,7 @@ def index():
         model = load_model("bankruptcy_model")
         pred = model.predict([[float(NPTA), float(TLTA), float(WCTA)]])
         print(pred)
-        s = "The precicted bankruptcy score is" + str(pred)
+        s = "The precicted bankruptcy score is " + str(pred)
         return(render_template("index.html", result = s))
     else:
         return(render_template("index.html", result = "Hello you dreaming is it pls key in something"))
